@@ -5,6 +5,15 @@
   box-sizing: border-box;
 }
 
+.title {
+  color: #FFFFFF;
+  font-size: 50px;
+  font-weight: 500;
+  max-width: 543px;
+  margin: 0;
+  word-break: normal;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -62,24 +71,26 @@ body {
 
 .footer {
   background-color: #10367C;
-  max-width: 1440px;
-  margin: 0 auto;
+  padding: 0 104px;
 }
 
 .footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
-  gap: 223px;
+  gap: 215px;
   text-align: left;
   padding: 120px 104px 0px;
-  margin-bottom: 64px;
+  margin-bottom: 58px;
 }
 
 .lists-all {
   list-style-type: none;
   padding-left: 0;
   color: #FFFFFF;
-  line-height: 2.3;
+  line-height: 46px;
   font-size: 20px;
+  font-weight: 400;
 }
 
 .text-bold {
@@ -87,29 +98,18 @@ body {
 }
 
 .list-support {
-  padding-left: 60px;
+  padding-left: 55px;
+}
+
+.rights {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 112px 120px;
 }
 
 .rights-reserved {
   color: #FFFFFF;
   font-size: 14px;
   line-height: 17px;
-  padding: 0px 0px 120px 105px;
-}
-
-.container-top {
-  max-width: 1440px;
-  background-image: url(./image/castelmezzano-1979546.png);
-  height: 100vh;
-  max-width: 1440px;
-}
-
-.header {
-  display: flex;
-}
-
-.triphous-logo {
-  background-image: url(./image/Group.png);
-  background-size: 205px 40px;
-  background-position: 205px 40px;
 }
