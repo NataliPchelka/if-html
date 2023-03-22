@@ -1,0 +1,115 @@
+@import url('./fonts.css');
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.title {
+  color: #FFFFFF;
+  font-size: 50px;
+  font-weight: 500;
+  max-width: 543px;
+  margin: 0;
+  word-break: normal;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.advantages {
+  max-width: 1440px;
+  background-color: #ffffff;
+  margin: 0 auto 120px;
+}
+
+.container {
+  padding: 0px 104px;
+}
+
+.offer-text {
+  font-size: 40px;
+  font-weight: 500;
+  color: #383838;
+  text-align: center;
+  padding-top: 120px;
+  margin-bottom: 20px;
+}
+
+.underline {
+  width: 104px;
+  height: 4px;
+  background-color: #F5BD41;
+  text-align: center;
+  margin: 0 auto 80px;
+  border: none;
+}
+
+.block-offer {
+  display: flex;
+  gap: 16px;
+  text-align: center;
+}
+
+.rectangles {
+  width: 296px;
+  height: 176px;
+}
+
+.outlined {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 45px;
+}
+
+.outlined-name {
+  font-size: 24px;
+  font-weight: 400;
+  color: #383838;
+}
+
+.footer {
+  background-color: #10367C;
+  padding: 0 104px;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  gap: 215px;
+  text-align: left;
+  padding: 120px 104px 0px;
+  margin-bottom: 58px;
+}
+
+.lists-all {
+  list-style-type: none;
+  padding-left: 0;
+  color: #FFFFFF;
+  line-height: 46px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.text-bold {
+  font-weight: 500;
+}
+
+.list-support {
+  padding-left: 55px;
+}
+
+.rights {
+  max-width: 1440px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 0 112px 120px;
+}
+
+.rights-reserved {
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 17px;
+}
