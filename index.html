@@ -5,11 +5,65 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой проект</title>
+  <title>Triphouse project</title>
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
+  <div class="top-section">
+    <div class="top-container">
+      <div class="header">
+        <div class="header-logo"></div>
+        <div class="header-menu">
+          <div class="header-menu-nav">
+            <ul class="nav-list">
+              <li class="nav-element">
+                <a href="#" class="nav-element-link">Stays</a>
+                <hr class="stays-underline">
+              </li>
+              <li class="nav-element">
+                <a href="#" class="nav-element-link">Attractions</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header-menu-nav">
+            <ul class="nav-list">
+              <li class="icon-nav-one">
+                <a href="#"></a>
+              </li>
+              <li class="icon-nav-tw0">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="title">
+        <h1 class="title-text">Discover stays </br>to live,
+          work or just relax</h1>
+      </div>
+      <form>
+        <div class="form-row">
+          <div class="input-place">
+            <label for="place-name" class="name-lable">Your destination or hotel name</label>
+            <input id="place-name" type="text" name="hotel-name" placeholder="New York" required>
+          </div>
+          <div class="input-period">
+            <label for="period" class="name-lable">Check-in—Check-out</label>
+            <input id="period" type="text" name="term" placeholder="Tue 15 Sept — Sat 19 Sept" required>
+          </div>
+          <input id="adults-children-room" type="text" name="adults-children-room"
+            placeholder="2 Adults — 0 Children — 1 Room" required>
+          <button class="search-submit">Search</button>
+        </div>
+      </form>
+      <div class="apps">
+        <div class="google-play"></div>
+        <div class="app-store"></div>
+      </div>
+    </div>
+  </div>
+
   <div class="advantages">
     <div class="container">
       <div class="offer">
