@@ -10,100 +10,122 @@
 </head>
 
 <body>
-  <div class="top-section">
-    <div class="top-container">
-      <div class="header">
-        <div class="header-logo"></div>
-        <div class="header-menu">
-          <div class="header-menu-nav">
-            <ul class="nav-list">
-              <li class="nav-element">
-                <a href="#" class="nav-element-link">Stays</a>
-                <hr class="stays-underline">
+  <div class="hedader">
+    <div class="hedader__container">
+      <div class="hedader__header">
+        <svg class="header__logo">
+          <use href="./image/sprite.svg#triphouse" />
+        </svg>
+        <div class="header__menu">
+          <div class="header__menu__nav">
+            <ul class="nav__list">
+              <li class="nav__list__item">
+                <a href="#" class="item__link">Stays</a>
+                <hr class="item__underline">
               </li>
-              <li class="nav-element">
-                <a href="#" class="nav-element-link">Attractions</a>
+              <li class="nav__list__item">
+                <a href="#" class="item__link">Attractions</a>
               </li>
             </ul>
           </div>
-          <div class="header-menu-nav">
-            <ul class="nav-list">
-              <li class="icon-nav-one">
-                <a href="#"></a>
+          <div class="header__menu__nav">
+            <ul class="nav__list">
+              <li class="nav__list__icon">
+                <svg class="icon__night">
+                  <use href="./image/sprite.svg#night" />
+                  <a href="#"></a>
+                </svg>
               </li>
-              <li class="icon-nav-tw0">
-                <a href="#"></a>
+              <li class="nav__list__icon">
+                <svg class="icon__account">
+                  <use href="./image/sprite.svg#account-circle" />
+                  <a href="#"></a>
+                </svg>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="title">
-        <h1 class="title-text">Discover stays </br>to live,
+      <div class="hedader__title">
+        <h1 class="hedader__title__text">Discover stays &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp to live,
           work or just relax</h1>
       </div>
       <form>
-        <div class="form-row">
-          <div class="input-place">
-            <label for="place-name" class="name-lable">Your destination or hotel name</label>
-            <input id="place-name" type="text" name="hotel-name" placeholder="New York" required>
+        <div class="hedader__form">
+          <div class="form__row__place">
+            <label for="input__place__name" class="lable__name">Your destination or hotel name</label>
+            <input id="input__place__name" class="input__name" type="text" name="hotel__name" placeholder="New York"
+              required>
           </div>
-          <div class="input-period">
-            <label for="period" class="name-lable">Check-in—Check-out</label>
-            <input id="period" type="text" name="term" placeholder="Tue 15 Sept — Sat 19 Sept" required>
+          <div class="form__row__period">
+            <label for="input__place__period" class="lable__name">Check-in—Check-out</label>
+            <input id="input__place__period" class="input__period" type="text" name="term"
+              placeholder="Tue 15 Sept — Sat 19 Sept" required>
           </div>
-          <input id="adults-children-room" type="text" name="adults-children-room"
+          <input id="input__number__people" class="number__people" type="text" name="adults__children__room"
             placeholder="2 Adults — 0 Children — 1 Room" required>
-          <button class="search-submit">Search</button>
+          <button class="search__submit">Search</button>
         </div>
       </form>
-      <div class="apps">
-        <div class="google-play"></div>
-        <div class="app-store"></div>
+      <div class="headader__apps">
+        <svg class="apps__google">
+          <use href="./image/sprite.svg#google__play" />
+        </svg>
+        <svg class="app__store">
+          <use href="./image/sprite.svg#app__store" />
+        </svg>
       </div>
     </div>
   </div>
 
   <div class="advantages">
-    <div class="container">
-      <div class="offer">
-        <h2 class="offer-text">What do we offer</h2>
-        <hr class="underline">
+    <div class="advantages__container">
+      <div class="advantages__container__offer">
+        <h2 class="offer__text">What do we offer</h2>
+        <hr class="offer__text__underline">
       </div>
-      <div class="block-offer">
-        <div class="rectangles">
-          <img class="outlined" src="./image/support.png" alt="Blue headphones">
-          <p class="outlined-name">Support 24/7</p>
+      <div class="advantages__container__block">
+        <div class="container__block__rectangles">
+          <svg class="container__block__outlined">
+            <use href="./image/sprite.svg#headset" />
+          </svg>
+          <p class="outlined__name">Support 24/7</p>
         </div>
-        <div class="rectangles">
-          <img class="outlined" src="./image/communicate.png" alt="Forum">
-          <p class="outlined-name">Communicate directly</p>
+        <div class="container__block__rectangles">
+          <svg class="container__block__outlined">
+            <use href="./image/sprite.svg#forum" />
+          </svg>
+          <p class="outlined__name">Communicate directly</p>
         </div>
-        <div class="rectangles">
-          <img class="outlined" src="./image/book-online.png" alt="Devices">
-          <p class="outlined-name">Book online</p>
+        <div class="container__block__rectangles">
+          <svg class="container__block__outlined">
+            <use href="./image/sprite.svg#devices" />
+          </svg>
+          <p class="outlined__name">Book online</p>
         </div>
-        <div class="rectangles">
-          <img class="outlined" src="./image/real-guest.png" alt="Raised thumb">
-          <p class="outlined-name">Real guest reviews</p>
+        <div class="container__block__rectangles">
+          <svg class="container__block__outlined">
+            <use href="./image/sprite.svg#thumb__up" />
+          </svg>
+          <p class="outlined__name">Real guest reviews</p>
         </div>
       </div>
     </div>
   </div>
   <div class="footer">
-    <div class="footer-container">
-      <div class="footer-lists">
-        <ul class="lists-all">
-          <li class="text-bold">About</li>
+    <div class="footer__container">
+      <div class="footer__container__lists">
+        <ul class="lists__all">
+          <li class="item__bold">About</li>
           <li>How Triphouse works</li>
           <li>Careers</li>
           <li>Privacy</li>
           <li>Terms</li>
         </ul>
       </div>
-      <div class="footer-lists">
-        <ul class="lists-all">
-          <li class="text-bold">Property types</li>
+      <div class="footer__container__lists">
+        <ul class="lists__all">
+          <li class="item__bold">Property types</li>
           <li>Guest houses</li>
           <li>Hotels</li>
           <li>Apartments</li>
@@ -112,16 +134,16 @@
           <li>Hostels</li>
         </ul>
       </div>
-      <div class="footer-lists">
-        <ul class="lists-all list-support">
-          <li class="text-bold">Support</li>
+      <div class="footer__container__lists">
+        <ul class="lists__all _lists__all--support">
+          <li class="item__bold">Support</li>
           <li>Contact Customer Service</li>
           <li>FAQ</li>
         </ul>
       </div>
     </div>
-    <div class="rights">
-      <div class="rights-reserved">&#169; 2022Triphouse, Inc. All rights reserved</div>
+    <div class="footer__rights">
+      <div class="footer__rights__reserved">&#169; 2022Triphouse, Inc. All rights reserved</div>
     </div>
   </div>
   </div>
