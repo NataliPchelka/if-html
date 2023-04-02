@@ -9,7 +9,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.hedader {
+.top {
   background-image: url(../image/castelmezzano-1979546.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,19 +17,19 @@ body {
   height: 100%;
 }
 
-.hedader__container {
+.top__container {
   max-width: 1440px;
   padding: 51px 104px 120px;
   margin: 0 auto;
 }
 
-.hedader__header {
+.top__header {
   display: flex;
   justify-content: space-between;
 }
 
 .header__logo {
-  /*background-image: url(../image/image-sprite.png);*/
+  background-image: url(../image/image-sprite.png);
   width: 205px;
   height: 40px;
   margin: 0;
@@ -43,7 +43,7 @@ body {
   margin: 0;
 }
 
-.header__menu__nav {
+.header__nav {
   display: flex;
   margin: 0;
 }
@@ -100,13 +100,13 @@ body {
 
 }
 
-.hedader__title {
+.top__title {
   margin: 0;
   max-width: 542px;
   padding: 198px 0 100px 0;
 }
 
-.hedader__title__text {
+.top__text {
   color: #FFFFFF;
   font-size: 50px;
   font-weight: 500;
@@ -115,7 +115,7 @@ body {
   margin: 0;
 }
 
-.hedader__form {
+.top__form {
   width: 1230px;
   display: flex;
   justify-content: flex-start;
@@ -190,7 +190,7 @@ body {
   margin: 0;
 }
 
-.headader__apps {
+.top__apps {
   display: flex;
   justify-content: center;
   margin: 0 104px;
@@ -204,7 +204,7 @@ body {
   margin-right: 8px;
 }
 
-.app__store {
+.apps__store {
   /*background-image: url(../image/image-sprite.png);
   background-position-x: 120px;*/
   width: 120px;
@@ -231,7 +231,7 @@ body {
   margin-bottom: 20px;
 }
 
-.offer__text__underline {
+.offer__underline {
   width: 104px;
   height: 4px;
   background-color: #F5BD41;
@@ -240,18 +240,18 @@ body {
   border: none;
 }
 
-.advantages__container__block {
+.advantages__block {
   display: flex;
   gap: 16px;
   text-align: center;
 }
 
-.container__block__rectangles {
+.advantages__rectangles {
   width: 296px;
   height: 176px;
 }
 
-.container__block__outlined {
+.rectangles__outlined {
   width: 100px;
   height: 100px;
   margin-bottom: 45px;
@@ -278,7 +278,7 @@ body {
   margin-bottom: 58px;
 }
 
-.lists__all {
+.list__item {
   list-style-type: none;
   padding-left: 0;
   color: #FFFFFF;
@@ -287,11 +287,11 @@ body {
   font-weight: 400;
 }
 
-.item__bold {
+.list__item--bold {
   font-weight: 500;
 }
 
-._lists__all--support {
+.lists__all--support {
   padding-left: 55px;
 }
 
@@ -302,7 +302,7 @@ body {
   padding: 0 112px 120px;
 }
 
-.footer__rights__reserved {
+.rights__reserved {
   color: #FFFFFF;
   font-size: 14px;
   line-height: 17px;
