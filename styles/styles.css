@@ -9,6 +9,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.svg__sprite {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
 .top {
   background-image: url(../image/castelmezzano-1979546.png);
   background-repeat: no-repeat;
@@ -17,7 +24,7 @@ body {
   height: 100%;
 }
 
-.top__container {
+.top__wrapper {
   max-width: 1440px;
   padding: 51px 104px 120px;
   margin: 0 auto;
@@ -28,14 +35,14 @@ body {
   justify-content: space-between;
 }
 
-.header__logo {
+.top__logo {
   background-image: url(../image/image-sprite.png);
   width: 205px;
   height: 40px;
   margin: 0;
 }
 
-.header__menu {
+.top__menu {
   display: flex;
   justify-content: space-between;
   flex-basis: 340px;
@@ -43,28 +50,29 @@ body {
   margin: 0;
 }
 
-.header__nav {
+.top__nav {
   display: flex;
   margin: 0;
 }
 
-.nav__list {
+.top__list {
   list-style-type: none;
   display: flex;
   align-items: center;
   padding-left: 0;
 }
 
-.item__link {
+.top__link {
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
   color: #FFFFFF;
   padding-right: 24px;
+  text-decoration: none;
   margin: 0;
 }
 
-.item__underline {
+.top__underline {
   width: 50px;
   height: 4px;
   margin: 10px 0 -10px 5px;
@@ -73,15 +81,15 @@ body {
 
 }
 
-.item__link {
+/*.item__link {
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
   color: #FFFFFF;
   text-decoration: none;
-}
+}*/
 
-.icon__night {
+.top__icon-night {
   /*background-image: url(../image/image-sprite.png);
   ackground-position-x: 325px;
   background-position-y: 35px;*/
@@ -91,7 +99,7 @@ body {
   margin: 0 24px;
 }
 
-.icon__account {
+.top__icon-account {
   /*background-image: url(../image/image-sprite.png);
   background-position-x: 295px;
   background-position-y: 40px;*/
@@ -123,14 +131,14 @@ body {
   margin-bottom: 120px;
 }
 
-.form__row__place,
-.form__row__period {
+.top__form-place,
+.top__form-period {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 
-.input__name {
+.top__input-name {
   width: 467px;
   height: 64px;
   border-radius: 8px 0 0 8px;
@@ -142,7 +150,7 @@ body {
   margin: 0;
 }
 
-.input__period {
+.top__input-period {
   height: 64px;
   width: 259px;
   border-radius: 8px;
@@ -157,7 +165,7 @@ body {
   margin-inline-end: -6px;
 }
 
-.number__people {
+.top__number-people {
   width: 327px;
   height: 64px;
   margin-right: -5px;
@@ -169,7 +177,7 @@ body {
   color: #383838;
 }
 
-.search__submit {
+.top__submit {
   width: 192px;
   height: 64px;
   border-radius: 8px;
@@ -182,7 +190,7 @@ body {
   font-weight: 500;
 }
 
-.lable__name {
+.top__lable {
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 400;
@@ -196,7 +204,7 @@ body {
   margin: 0 104px;
 }
 
-.apps__google {
+.top__google {
   /*background-image: url(../image/image-sprite.png);
   background-position-x: 255px;*/
   width: 135px;
@@ -204,7 +212,7 @@ body {
   margin-right: 8px;
 }
 
-.apps__store {
+.top__store {
   /*background-image: url(../image/image-sprite.png);
   background-position-x: 120px;*/
   width: 120px;
@@ -218,11 +226,11 @@ body {
   margin: 0 auto 120px;
 }
 
-.advantages__container {
+.advantages__wrapper {
   padding: 0px 104px;
 }
 
-.offer__text {
+.advantages__text {
   font-size: 40px;
   font-weight: 500;
   color: #383838;
@@ -231,7 +239,7 @@ body {
   margin-bottom: 20px;
 }
 
-.offer__underline {
+.advantages__underline {
   width: 104px;
   height: 4px;
   background-color: #F5BD41;
@@ -240,7 +248,7 @@ body {
   border: none;
 }
 
-.advantages__block {
+.advantages__cards {
   display: flex;
   gap: 16px;
   text-align: center;
@@ -251,13 +259,13 @@ body {
   height: 176px;
 }
 
-.rectangles__outlined {
+.advantages__outlined {
   width: 100px;
   height: 100px;
   margin-bottom: 45px;
 }
 
-.outlined__name {
+.advantages__description {
   font-size: 24px;
   font-weight: 400;
   color: #383838;
@@ -268,7 +276,7 @@ body {
   padding: 0 104px;
 }
 
-.footer__container {
+.footer__wrapper {
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
@@ -278,7 +286,7 @@ body {
   margin-bottom: 58px;
 }
 
-.list__item {
+.footer__item {
   list-style-type: none;
   padding-left: 0;
   color: #FFFFFF;
@@ -287,7 +295,7 @@ body {
   font-weight: 400;
 }
 
-.list__item--bold {
+.footer__item--bold {
   font-weight: 500;
 }
 
@@ -302,7 +310,7 @@ body {
   padding: 0 112px 120px;
 }
 
-.rights__reserved {
+.footer__copyright {
   color: #FFFFFF;
   font-size: 14px;
   line-height: 17px;
