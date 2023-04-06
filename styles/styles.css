@@ -9,35 +9,40 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.top-section {
+.svg__sprite {
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.top {
   background-image: url(../image/castelmezzano-1979546.png);
   background-repeat: no-repeat;
   background-size: cover;
-  max-height: 123vh;
-  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
 }
 
-.top-container {
+.top__wrapper {
   max-width: 1440px;
-  height: 100vw;
-  align-items: center;
-  padding: 51px 104px 0px;
+  padding: 51px 104px 120px;
   margin: 0 auto;
 }
 
-.header {
+.top__header {
   display: flex;
   justify-content: space-between;
 }
 
-.header-logo {
-  background-image: url(../image/Group.png);
+.top__logo {
+  background-image: url(../image/image-sprite.png);
   width: 205px;
   height: 40px;
   margin: 0;
 }
 
-.header-menu {
+.top__menu {
   display: flex;
   justify-content: space-between;
   flex-basis: 340px;
@@ -45,28 +50,29 @@ body {
   margin: 0;
 }
 
-.header-menu-nav {
+.top__nav {
   display: flex;
   margin: 0;
 }
 
-.nav-list {
+.top__list {
   list-style-type: none;
   display: flex;
   align-items: center;
   padding-left: 0;
 }
 
-.nav-element-link {
+.top__link {
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
   color: #FFFFFF;
   padding-right: 24px;
+  text-decoration: none;
   margin: 0;
 }
 
-.stays-underline {
+.top__underline {
   width: 50px;
   height: 4px;
   margin: 10px 0 -10px 5px;
@@ -75,46 +81,49 @@ body {
 
 }
 
-.nav-element-link {
+/*.item__link {
   font-size: 24px;
   font-weight: 400;
   line-height: 28px;
   color: #FFFFFF;
   text-decoration: none;
-}
+}*/
 
-.icon-nav-one {
-  background-image: url(../image/Group.png);
+.top__icon-night {
+  /*background-image: url(../image/image-sprite.png);
+  ackground-position-x: 325px;
+  background-position-y: 35px;*/
   width: 30px;
   height: 30px;
-  background-position-x: 325px;
-  background-position-y: 35px;
+
   margin: 0 24px;
 }
 
-.icon-nav-tw0 {
-  background-image: url(../image/Group.png);
+.top__icon-account {
+  /*background-image: url(../image/image-sprite.png);
+  background-position-x: 295px;
+  background-position-y: 40px;*/
   width: 40px;
   height: 40px;
-  background-position-x: 295px;
-  background-position-y: 40px;
+
 }
 
-.title {
+.top__title {
   margin: 0;
+  max-width: 542px;
   padding: 198px 0 100px 0;
 }
 
-.title-text {
+.top__text {
   color: #FFFFFF;
   font-size: 50px;
   font-weight: 500;
   line-height: 1.2;
-  max-width: 542px;
+
   margin: 0;
 }
 
-.form-row {
+.top__form {
   width: 1230px;
   display: flex;
   justify-content: flex-start;
@@ -122,14 +131,14 @@ body {
   margin-bottom: 120px;
 }
 
-.input-place,
-.input-period {
+.top__form-place,
+.top__form-period {
   display: flex;
   flex-direction: column;
   margin: 0;
 }
 
-#place-name {
+.top__input-name {
   width: 467px;
   height: 64px;
   border-radius: 8px 0 0 8px;
@@ -141,7 +150,7 @@ body {
   margin: 0;
 }
 
-#period {
+.top__input-period {
   height: 64px;
   width: 259px;
   border-radius: 8px;
@@ -156,7 +165,7 @@ body {
   margin-inline-end: -6px;
 }
 
-#adults-children-room {
+.top__number-people {
   width: 327px;
   height: 64px;
   margin-right: -5px;
@@ -168,7 +177,7 @@ body {
   color: #383838;
 }
 
-.search-submit {
+.top__submit {
   width: 192px;
   height: 64px;
   border-radius: 8px;
@@ -181,7 +190,7 @@ body {
   font-weight: 500;
 }
 
-.name-lable {
+.top__lable {
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 400;
@@ -189,23 +198,23 @@ body {
   margin: 0;
 }
 
-.apps {
+.top__apps {
   display: flex;
   justify-content: center;
-  margin: 0 104px 120px;
+  margin: 0 104px;
 }
 
-.google-play {
-  background-image: url(../image/Group.png);
-  background-position-x: 255px;
+.top__google {
+  /*background-image: url(../image/image-sprite.png);
+  background-position-x: 255px;*/
   width: 135px;
   height: 40px;
   margin-right: 8px;
 }
 
-.app-store {
-  background-image: url(../image/Group.png);
-  background-position-x: 120px;
+.top__store {
+  /*background-image: url(../image/image-sprite.png);
+  background-position-x: 120px;*/
   width: 120px;
   height: 40px;
   margin-left: 8px;
@@ -217,11 +226,11 @@ body {
   margin: 0 auto 120px;
 }
 
-.container {
+.advantages__wrapper {
   padding: 0px 104px;
 }
 
-.offer-text {
+.advantages__text {
   font-size: 40px;
   font-weight: 500;
   color: #383838;
@@ -230,7 +239,7 @@ body {
   margin-bottom: 20px;
 }
 
-.underline {
+.advantages__underline {
   width: 104px;
   height: 4px;
   background-color: #F5BD41;
@@ -239,24 +248,24 @@ body {
   border: none;
 }
 
-.block-offer {
+.advantages__cards {
   display: flex;
   gap: 16px;
   text-align: center;
 }
 
-.rectangles {
+.advantages__rectangles {
   width: 296px;
   height: 176px;
 }
 
-.outlined {
+.advantages__outlined {
   width: 100px;
   height: 100px;
   margin-bottom: 45px;
 }
 
-.outlined-name {
+.advantages__description {
   font-size: 24px;
   font-weight: 400;
   color: #383838;
@@ -267,7 +276,7 @@ body {
   padding: 0 104px;
 }
 
-.footer-container {
+.footer__wrapper {
   max-width: 1440px;
   margin: 0 auto;
   display: flex;
@@ -277,7 +286,7 @@ body {
   margin-bottom: 58px;
 }
 
-.lists-all {
+.footer__item {
   list-style-type: none;
   padding-left: 0;
   color: #FFFFFF;
@@ -286,22 +295,22 @@ body {
   font-weight: 400;
 }
 
-.text-bold {
+.footer__item--bold {
   font-weight: 500;
 }
 
-.list-support {
+.lists__all--support {
   padding-left: 55px;
 }
 
-.rights {
+.footer__rights {
   max-width: 1440px;
   margin: 0 auto;
   text-align: left;
   padding: 0 112px 120px;
 }
 
-.rights-reserved {
+.footer__copyright {
   color: #FFFFFF;
   font-size: 14px;
   line-height: 17px;
