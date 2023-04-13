@@ -13,6 +13,7 @@ body {
   --col-width: calc(100% / 12);
   --font-dark: #383838;
   --font-light: #FFFFFF;
+  --font-bright: #F5BD41;
 }
 
 .col-1 {
@@ -79,7 +80,7 @@ body {
   background-image: url(../image/castelmezzano-1979546.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+
   height: 100%;
 }
 
@@ -135,7 +136,7 @@ body {
   width: 50px;
   height: 4px;
   margin: 10px 0 -10px 5px;
-  background-color: #F5BD41;
+  background-color: var(--font-bright);
   border: none;
 
 }
@@ -147,13 +148,15 @@ body {
 }
 
 .top__icon-account {
+  width: 40px;
   height: 40px;
 }
 
 .top__title {
   margin: 0;
   max-width: 542px;
-  padding: 198px 0 100px 0;
+  padding-top: 198px;
+
 }
 
 .top__text {
@@ -161,65 +164,128 @@ body {
   font-size: 50px;
   font-weight: 500;
   line-height: 1.2;
-  margin: 0;
+}
+
+form {
+  padding-top: 124px;
+  margin: 0 -8px;
 }
 
 .top__form {
-  width: 1230px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  margin-bottom: 120px;
+  position: relative;
+  background-color: var(--font-light);
+  height: 64px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 24px 0 120px;
 }
 
-.top__form-place,
-.top__form-period {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+.top__form-place {
+  padding: 0;
+}
+
+.top__lable-city {
+  color: var(--font-light);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 24px 0 24px 18px;
+  position: relative;
 }
 
 .top__input-name {
-  width: 467px;
-  height: 64px;
-  border-radius: 8px 0 0 8px;
+  border-radius: 8px;
   border: none;
   padding: 22px 0 21px 24px;
   font-size: 18px;
   font-weight: 400;
   color: var(--font-dark);
-  margin: 0;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.top__input-name::placeholder {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--font-dark);
+
+}
+
+.top__lable-period {
+  position: relative;
+  bottom: 50px;
+  color: var(--font-light);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.top__lable-check::after {
+  display: block;
+  width: 15px;
+  content: "";
+  position: absolute;
+  border: 1px solid #FFFFFF;
+  top: 50%;
+  left: 80px;
+}
+
+.top__form-period {
+  display: flex;
+  width: 22%;
+  border: 3px solid var(--font-bright);
+  border-radius: 8px;
+  height: 64px;
+}
+
+.top__check-in,
+.top__check-out {
+  position: relative;
+  width: 50%;
 }
 
 .top__input-period {
-  height: 64px;
-  width: 259px;
-  border-radius: 8px;
-  border: 3px solid #F5BD41;
-  position: relative;
-  text-align: center;
+  border: none;
   font-size: 18px;
   font-weight: 400;
+  position: relative;
   color: var(--font-dark);
-  padding: 22px 16px;
-  margin-inline-start: -6px;
-  margin-inline-end: -6px;
+}
+
+.top__input-period::placeholder {
+  color: var(--font-dark);
+}
+
+.top__check-end {
+  min-width: 120px;
+  padding-left: 6px;
+  border: none;
+}
+
+.top__form-people {
+  display: flex;
+  width: 33%;
+  border-radius: 8px;
+  height: 64px;
+  padding: 0;
 }
 
 .top__number-people {
-  width: 327px;
-  height: 64px;
-  margin-right: -5px;
-  text-align: center;
-  padding: 22px 24px 21px;
+  width: 30%;
+  border: none;
+}
+
+.top__number-people::placeholder {
   font-size: 18px;
-  font-weight: 400;
-  line-height: 21px;
-  color: var(--font-dark);
+  color: #383838;
+  text-align: center;
 }
 
 .top__submit {
-  width: 192px;
+  max-width: 100%;
+  position: relative;
+  left: 14px;
   height: 64px;
   border-radius: 8px;
   border: none;
@@ -229,14 +295,6 @@ body {
   text-align: center;
   font-size: 24px;
   font-weight: 500;
-}
-
-.top__lable {
-  color: var(--font-light);
-  font-size: 18px;
-  font-weight: 400;
-  padding: 0 0 24px 18px;
-  margin: 0;
 }
 
 .top__apps {
@@ -276,7 +334,7 @@ body {
 .advantages__underline {
   width: 104px;
   height: 4px;
-  background-color: #F5BD41;
+  background-color: var(--font-bright);
   text-align: center;
   margin: 0 auto 80px;
   border: none;
@@ -308,11 +366,10 @@ body {
 
 .footer__wrapper {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto 58px;
   display: flex;
   text-align: left;
   padding: 120px 104px 0px;
-  margin-bottom: 58px;
 }
 
 .footer__item {
@@ -354,6 +411,68 @@ body {
 }
 
 @media (max-width: 1200px) {
+
+  .top__title {
+    max-width: 542px;
+  }
+
+  .top__lable-city {
+    font-size: 15px;
+    padding: 24px 0 20px 15px;
+    position: relative;
+  }
+
+  .top__input-name {
+    padding: 20px 0 19px 21px;
+    font-size: 15px;
+    margin-top: 21px;
+    width: 100%;
+  }
+
+  .top__input-name::placeholder {
+    font-size: 15px;
+    padding-left: 2px;
+  }
+
+  .top__lable-period {
+    font-size: 14px;
+  }
+
+  .top__lable-check::after {
+    width: 8px;
+    left: 60px;
+  }
+
+  .top__form-period {
+    width: 20%;
+    padding: 0;
+  }
+
+  .top__check-in,
+  .top__check-out {
+    position: relative;
+    width: 50%;
+  }
+
+  .top__input-period {
+    font-size: 15px;
+    padding: 0;
+  }
+
+  .top__check-end {
+    min-width: 100px;
+    padding-left: 4px;
+  }
+
+  .top__number-people::placeholder {
+    font-size: 13px;
+  }
+
+  .top__submit {
+    font-size: 21px;
+    padding: 15px 30px;
+  }
+
   .advantages__text {
     font-size: 35px;
   }
@@ -433,6 +552,154 @@ body {
 
   .col-md-12 {
     width: calc(var(--col-width) * 12);
+  }
+
+  .top__wrapper {
+    padding: 30px 35px;
+  }
+
+  .top_header {
+    margin-bottom: 52px;
+  }
+
+  .top__logo {
+    height: 35px;
+    width: 180px;
+  }
+
+  .top__menu {
+    flex-basis: 120px;
+  }
+
+  .top__list {
+    padding-right: 32px;
+  }
+
+  .top__icon-night {
+    width: 25px;
+    height: 25px;
+  }
+
+  .top__icon-account {
+    width: 35px;
+    height: 35px;
+  }
+
+  .top__list-mobile {
+    background-image: url(../image/menu.png);
+    width: 30px;
+    height: 20px;
+    align-self: flex-start;
+    order: 1;
+  }
+
+  .top__item {
+    display: none;
+  }
+
+  .top__nav-item {
+    order: 2;
+  }
+
+  .top__nav-icon {
+    order: 1;
+  }
+
+  .top__title {
+    padding: 120px 0 31px;
+    max-width: 380px;
+    font-size: 30px;
+  }
+
+  .top__text {
+    font-size: 35px;
+  }
+
+  .top__form {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 0px;
+    background-color: inherit;
+    padding-bottom: 50px;
+  }
+
+  .top__input-name {
+    height: 48px;
+    border-radius: 0;
+    border: 4px solid var(--font-bright);
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+    padding-top: 24px;
+    padding-left: 36px;
+    color: #383838;
+    margin: 0;
+  }
+
+  .top__lable-city {
+    position: absolute;
+    bottom: 10px;
+    color: #383838;
+    left: 10px;
+  }
+
+  .top__lable-city::before {
+    content: "";
+    position: absolute;
+    margin-top: 12px;
+    background: url("../image/Vector.png");
+  }
+
+  .top__input-name::placeholder {
+    color: var(--font-light);
+  }
+
+  .top__form-period {
+    padding: 0;
+    margin: 0;
+    height: 48px;
+    border-radius: 0;
+    border: none;
+  }
+
+  .top__input-period {
+    height: 48px;
+    border-radius: 0;
+    border: 4px solid var(--font-bright);
+    width: 100%;
+    padding-left: 18px;
+  }
+
+  .top__lable-period {
+    display: none;
+  }
+
+  .top__form-people {
+    border: 4px solid var(--font-bright);
+    border-radius: 0;
+  }
+
+  .top__number-people {
+    position: inherit;
+    padding: 0;
+    margin: 0;
+    border: none;
+    height: 48px;
+    width: 34%;
+    border-radius: 0;
+    border-right-style: outset;
+  }
+
+  .top__submit {
+    position: initial;
+    border: 4px solid var(--font-bright);
+    border-radius: 0;
+  }
+
+  .top__apps {
+    padding-top: 80px;
+    margin-bottom: 40px;
   }
 
   .footer__nav {
@@ -523,6 +790,8 @@ body {
 }
 
 @media (max-width: 768px) {
+
+
   .footer__text {
     font-size: 16px;
   }
@@ -567,6 +836,61 @@ body {
 
   .col-sm-6 {
     width: 100%;
+  }
+
+  .top {
+    padding: 24px 16px;
+  }
+
+  .top__wrapper {
+    padding: 0;
+  }
+
+  .top_header {
+    margin-bottom: 52px;
+  }
+
+  .top__menu {
+    flex-basis: 115px;
+    align-items: center;
+    height: 24px;
+
+  }
+
+  .top__logo {
+    background-image: url(../image/logo_vector_house.png);
+    width: 122px;
+    height: 24px;
+  }
+
+  .top__icon-night {
+    width: 16px;
+    height: 16px;
+    margin: 0 16px;
+  }
+
+  .top__icon-account {
+    width: 24px;
+    height: 24px;
+  }
+
+  .top__title {
+    padding: 52px 0 31px;
+    max-width: 334px;
+    font-size: 30px;
+  }
+
+  .top__text {
+    font-size: 30px;
+  }
+
+  form {
+    padding: 0;
+  }
+
+  .top__apps {
+    padding-top: 50px;
+    margin: auto;
   }
 
   .advantages__wrapper {

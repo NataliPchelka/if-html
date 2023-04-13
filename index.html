@@ -96,14 +96,14 @@
         d="M87.5 33.333H61.208l3.959-19.041.125-1.334a6.272 6.272 0 0 0-1.834-4.416l-4.416-4.375-27.417 27.458a8.147 8.147 0 0 0-2.458 5.875v41.667c0 4.583 3.75 8.333 8.333 8.333H75a8.277 8.277 0 0 0 7.667-5.083L95.25 53.042A8.232 8.232 0 0 0 95.833 50v-8.333c0-4.584-3.75-8.334-8.333-8.334ZM87.5 50 75 79.167H37.5V37.5l18.083-18.083-4.625 22.25H87.5V50ZM4.167 37.5h16.666v50H4.167v-50Z" />
     </symbol>
   </svg>
-  <!--<div class="top">
+  <div class="top">
     <div class="top__wrapper">
       <div class="top__header">
         <div class="top__logo">
         </div>
         <div class="top__menu">
-          <div class="top__nav">
-            <ul class="top__list">
+          <div class="top__nav top__nav-item">
+            <ul class="top__list top__list-mobile">
               <li class="top__item">
                 <a href="#" class="top__link">Stays</a>
                 <hr class="top__underline">
@@ -113,7 +113,7 @@
               </li>
             </ul>
           </div>
-          <div class="top__nav">
+          <div class="top__nav top__nav-icon">
             <ul class="top__list">
               <li class="top__icon">
                 <svg class="top__icon-night">
@@ -132,27 +132,43 @@
         </div>
       </div>
       <div class="top__title">
-        <h1 class="top__text">Discover stays &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp to live,
+        <h1 class="top__text">Discover <span class="spaces">stays &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</span> to
+          live,
           work or just relax</h1>
       </div>
-      <form>
-        <div class="top__form">
-          <div class="top__form-place">
-            <label for="top__city" class="top__lable">Your destination or hotel name</label>
-            <input id="top__city" class="top__input-name" type="text" name="hotel__name" placeholder="New York"
+
+      <form class="form">
+        <div class="top__form col-12 col-md-12 col-sm-6">
+          <div class="top__form-place col-6 col-md-12 col-sm-6">
+            <label for="top__city" class="top__lable-city">Your destination or hotel name</label>
+            <input id="top__city" class="top__input-name  type=" text" name="hotel__name" placeholder="New York"
               required>
           </div>
-          <div class="top__form-period">
-            <label for="top__period" class="top__lable">Check-in—Check-out</label>
-            <input id="top__period" class="top__input-period" type="text" name="term"
-              placeholder="Tue 15 Sept — Sat 19 Sept" required>
+          <div class="top__form-period col-3 col-md-12 col-sm-6">
+            <div class="top__check-in">
+              <label for="top__period" class="top__lable-period top__lable-check col-6">Check-in</label>
+              <input id="top__period" class="top__input-period top__check-start" type="text" name="term"
+                placeholder="Tue 15 Sept" required>
+            </div>
+            <div class="top__check-out">
+              <label for="top__period" class="top__lable-period">Check-out</label>
+              <input id="top__period" class="top__input-period col-1 top__check-end" type="text" name="term"
+                placeholder="Sat 19 Sept" required>
+            </div>
           </div>
-          <input id="top__people" class="top__number-people" type="text" name="adults__children__room"
-            placeholder="2 Adults — 0 Children — 1 Room" required>
-          <button class="top__submit">Search</button>
+          <div class="top__form-people col-3 col-md-12 col-sm-6">
+            <input id="top__people" class="top__number-people" type="text" name="adults" placeholder="2 Adults"
+              required>
+
+            <input id="top__people" class="top__number-people" type="text" name="children" placeholder="0 Children"
+              required>
+
+            <input id="top__people" class="top__number-people" type="text" name="room" placeholder="1 Room" required>
+          </div>
+          <button class="top__submit col-2 col-md-12 col-sm-6">Search</button>
         </div>
       </form>
-      <div class="top__apps">
+      <div class="top__apps col-sm-4">
         <svg class="top__google">
           <use href="#google__play" />
         </svg>
@@ -161,7 +177,7 @@
         </svg>
       </div>
     </div>
-  </div>-->
+  </div>
 
   <div class="advantages">
     <div class="advantages__wrapper">
