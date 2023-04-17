@@ -14,6 +14,7 @@ body {
   --font-dark: #383838;
   --font-light: #FFFFFF;
   --font-bright: #F5BD41;
+  --font-blue: #3077C6;
 }
 
 .col-1 {
@@ -80,7 +81,6 @@ body {
   background-image: url(../image/castelmezzano-1979546.png);
   background-repeat: no-repeat;
   background-size: cover;
-
   height: 100%;
 }
 
@@ -226,7 +226,7 @@ form {
   width: 15px;
   content: "";
   position: absolute;
-  border: 1px solid #FFFFFF;
+  border: 1px solid var(--font-light);
   top: 50%;
   left: 80px;
 }
@@ -278,7 +278,7 @@ form {
 
 .top__number-people::placeholder {
   font-size: 18px;
-  color: #383838;
+  color: var(--font-dark);
   text-align: center;
 }
 
@@ -289,7 +289,7 @@ form {
   height: 64px;
   border-radius: 8px;
   border: none;
-  background-color: #3077C6;
+  background-color: var(--font-blue);
   color: var(--font-light);
   padding: 20px 57px;
   text-align: center;
@@ -626,21 +626,23 @@ form {
   .top__input-name {
     height: 48px;
     border-radius: 0;
-    border: 4px solid var(--font-bright);
+    border-width: 4px 8px;
+    border-style: solid;
+    border-color: var(--font-bright);
     margin-bottom: 8px;
     font-size: 15px;
     font-weight: 500;
     line-height: 18px;
     padding-top: 24px;
     padding-left: 36px;
-    color: #383838;
+    color: var(--font-dark);
     margin: 0;
   }
 
   .top__lable-city {
     position: absolute;
     bottom: 10px;
-    color: #383838;
+    color: var(--font-dark);
     left: 10px;
   }
 
@@ -652,7 +654,7 @@ form {
   }
 
   .top__input-name::placeholder {
-    color: var(--font-light);
+    opacity: 0;
   }
 
   .top__form-period {
@@ -666,7 +668,9 @@ form {
   .top__input-period {
     height: 48px;
     border-radius: 0;
-    border: 4px solid var(--font-bright);
+    border-width: 4px 8px 4px 8px;
+    border-style: solid;
+    border-color: var(--font-bright);
     width: 100%;
     padding-left: 18px;
   }
@@ -676,7 +680,9 @@ form {
   }
 
   .top__form-people {
-    border: 4px solid var(--font-bright);
+    border-width: 4px 8px;
+    border-style: solid;
+    border-color: var(--font-bright);
     border-radius: 0;
   }
 
@@ -693,7 +699,9 @@ form {
 
   .top__submit {
     position: initial;
-    border: 4px solid var(--font-bright);
+    border-width: 4px 8px;
+    border-style: solid;
+    border-color: var(--font-bright);
     border-radius: 0;
   }
 
