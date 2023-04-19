@@ -140,34 +140,40 @@
       <form class="form">
         <div class="top__form col-12 col-md-12 col-sm-6">
           <div class="top__form-place col-6 col-md-12 col-sm-6">
-            <label for="top__city" class="top__lable-city">Your destination or hotel name</label>
-            <input id="top__city" class="top__input-name  type=" text" name="hotel__name" placeholder="New York"
+            <input id="top__city" class="top__input-name" type="text" name="hotel__name" placeholder="New York"
               required>
+            <label for="top__city" class="top__lable-city">Your destination or hotel name</label>
           </div>
           <div class="top__form-period col-3 col-md-12 col-sm-6">
-            <div class="top__check-in">
-              <label for="top__period" class="top__lable-period top__lable-check col-6">Check-in</label>
+            <div class="top__check-in col-md-6 col-sm-3">
               <input id="top__period" class="top__input-period top__check-start" type="text" name="term"
                 placeholder="Tue 15 Sept" required>
+              <label for="top__period" class="top__lable-period top__lable-check">Check-in</label>
             </div>
             <div class="top__check-out">
-              <label for="top__period" class="top__lable-period">Check-out</label>
               <input id="top__period" class="top__input-period col-1 top__check-end" type="text" name="term"
                 placeholder="Sat 19 Sept" required>
+              <label for="top__period" class="top__lable-period">Check-out</label>
             </div>
           </div>
-          <div class="top__form-people col-3 col-md-12 col-sm-6">
-            <input id="top__people" class="top__number-people" type="text" name="adults" placeholder="2 Adults"
-              required>
-
-            <input id="top__people" class="top__number-people" type="text" name="children" placeholder="0 Children"
-              required>
-
-            <input id="top__people" class="top__number-people" type="text" name="room" placeholder="1 Room" required>
+          <div class="top__form-people col-4 col-md-12 col-sm-6">
+            <div class="top__adults col-md-4">
+              <input id="top__adults" class="top__number-adults top__number" type="text" name="adults" required>
+              <label for="top__adults" class="top__lable-adults top__lable-number">Adults</label>
+            </div>
+            <div class="top__children col-md-4">
+              <input id="top__children" class="top__number-children top__number" type="text" name="children" required>
+              <label for="top__children" class="top__lable-children top__lable-number">Children</label>
+            </div>
+            <div class="top__room col-md-4">
+              <input id="top__room" class="top__number-room top__number" type="text" name="room" required>
+              <label for="top__room" class="top__lable-room top__lable-number">Room</label>
+            </div>
           </div>
           <button class="top__submit col-2 col-md-12 col-sm-6">Search</button>
         </div>
       </form>
+
       <div class="top__apps col-sm-4">
         <svg class="top__google">
           <use href="#google__play" />
