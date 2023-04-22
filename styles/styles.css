@@ -13,6 +13,8 @@ body {
   --col-width: calc(100% / 12);
   --font-dark: #383838;
   --font-light: #FFFFFF;
+  --font-bright: #F5BD41;
+  --font-blue: #3077C6;
 }
 
 .col-1 {
@@ -79,7 +81,6 @@ body {
   background-image: url(../image/castelmezzano-1979546.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
   height: 100%;
 }
 
@@ -135,7 +136,7 @@ body {
   width: 50px;
   height: 4px;
   margin: 10px 0 -10px 5px;
-  background-color: #F5BD41;
+  background-color: var(--font-bright);
   border: none;
 
 }
@@ -147,13 +148,15 @@ body {
 }
 
 .top__icon-account {
+  width: 40px;
   height: 40px;
 }
 
 .top__title {
   margin: 0;
   max-width: 542px;
-  padding: 198px 0 100px 0;
+  padding-top: 198px;
+
 }
 
 .top__text {
@@ -161,82 +164,206 @@ body {
   font-size: 50px;
   font-weight: 500;
   line-height: 1.2;
-  margin: 0;
+}
+
+.form {
+  padding-top: 124px;
+  margin: 0 -8px;
+
 }
 
 .top__form {
-  width: 1230px;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
-  margin-bottom: 120px;
+  background-color: var(--font-light);
+  height: 64px;
+  border-radius: 8px;
+  padding: 0;
+  margin: 24px 0 120px;
 }
 
-.top__form-place,
-.top__form-period {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
+.top__form-place {
+  padding: 0;
+  position: relative;
+}
+
+.top__lable-city {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  color: var(--font-light);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 24px 0 24px 18px;
 }
 
 .top__input-name {
-  width: 467px;
-  height: 64px;
-  border-radius: 8px 0 0 8px;
+  position: relative;
+  border-radius: 8px;
   border: none;
   padding: 22px 0 21px 24px;
   font-size: 18px;
   font-weight: 400;
   color: var(--font-dark);
   margin: 0;
+  width: 100%;
 }
 
-.top__input-period {
-  height: 64px;
-  width: 259px;
-  border-radius: 8px;
-  border: 3px solid #F5BD41;
-  position: relative;
-  text-align: center;
+.top__input-name::placeholder,
+.top__input-period::placeholder {
+
   font-size: 18px;
   font-weight: 400;
   color: var(--font-dark);
-  padding: 22px 16px;
-  margin-inline-start: -6px;
-  margin-inline-end: -6px;
 }
 
-.top__number-people {
-  width: 327px;
-  height: 64px;
-  margin-right: -5px;
-  text-align: center;
-  padding: 22px 24px 21px;
+.top__lable-period {
+  position: relative;
+  bottom: 85px;
+  left: -15px;
+  padding: 0;
+
+  color: var(--font-light);
   font-size: 18px;
   font-weight: 400;
-  line-height: 21px;
+}
+
+.top__lable-check::after {
+  display: block;
+  width: 15px;
+  content: "";
+  position: absolute;
+  border: 1px solid var(--font-light);
+  top: 50%;
+  left: 80px;
+}
+
+.top__form-period {
+  display: flex;
+  width: 22%;
+  border: 3px solid var(--font-bright);
+  border-radius: 8px;
+  height: 64px;
+  padding: 0;
+}
+
+.top__check-in,
+.top__check-out {
+  position: relative;
+  width: 50%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.top__input-period {
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  color: var(--font-dark);
+}
+
+.top__input-period::placeholder {
+  color: var(--font-dark);
+}
+
+.top__check-end,
+.top__check-start {
+  min-width: 120px;
+  padding-left: 6px;
+  border: none;
+}
+
+.top__form-people {
+  display: flex;
+  position: relative;
+  border-radius: 8px;
+
+  padding: 0;
+}
+
+.top__adults,
+.top__children,
+.top__room {
+  position: relative;
+  height: 64px;
+  border: none;
+}
+
+.top__number {
+  height: 64px;
+  width: 100%;
+  border: none;
+  gap: 5px;
+}
+
+.top__lable-adults,
+.top__lable-children,
+.top__lable-room {
+  position: absolute;
+  left: 15px;
+  top: 22px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--font-dark);
+}
+
+.top__lable-adults::before {
+  content: "2";
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--font-dark);
+}
+
+.top__lable-adults::after {
+  content: "";
+  display: block;
+  width: 20px;
+  position: absolute;
+  border: 1px solid var(--font-dark);
+  top: 50%;
+  left: 70px;
+}
+
+.top__lable-children::after {
+  content: "";
+  display: block;
+  width: 20px;
+  position: absolute;
+  border: 1px solid var(--font-dark);
+  top: 50%;
+  left: 80px;
+}
+
+.top__lable-children::before {
+  content: "0";
+  padding-right: 3px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--font-dark);
+}
+
+.top__lable-room::before {
+  content: "1";
+  padding-right: 3px;
+  font-size: 18px;
+  font-weight: 400;
   color: var(--font-dark);
 }
 
 .top__submit {
-  width: 192px;
+  max-width: 100%;
+  position: relative;
+  left: 14px;
   height: 64px;
   border-radius: 8px;
   border: none;
-  background-color: #3077C6;
+  background-color: var(--font-blue);
   color: var(--font-light);
   padding: 20px 57px;
   text-align: center;
   font-size: 24px;
   font-weight: 500;
-}
-
-.top__lable {
-  color: var(--font-light);
-  font-size: 18px;
-  font-weight: 400;
-  padding: 0 0 24px 18px;
-  margin: 0;
 }
 
 .top__apps {
@@ -276,7 +403,7 @@ body {
 .advantages__underline {
   width: 104px;
   height: 4px;
-  background-color: #F5BD41;
+  background-color: var(--font-bright);
   text-align: center;
   margin: 0 auto 80px;
   border: none;
@@ -308,11 +435,10 @@ body {
 
 .footer__wrapper {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto 58px;
   display: flex;
   text-align: left;
   padding: 120px 104px 0px;
-  margin-bottom: 58px;
 }
 
 .footer__item {
@@ -354,6 +480,74 @@ body {
 }
 
 @media (max-width: 1200px) {
+
+  .top__title {
+    max-width: 542px;
+  }
+
+  .top__lable-city {
+    position: relative;
+    font-size: 15px;
+    padding: 24px 0 20px 15px;
+    bottom: 100px;
+  }
+
+  .top__input-name {
+    padding: 20px 0 19px 21px;
+    font-size: 15px;
+    margin-top: 21px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .top__input-name::placeholder {
+    font-size: 15px;
+    padding-left: 2px;
+  }
+
+  .top__lable-period {
+    font-size: 14px;
+  }
+
+  .top__lable-check::after {
+    width: 8px;
+    left: 60px;
+  }
+
+  .top__form-period {
+    width: 20%;
+    padding: 0;
+  }
+
+  .top__check-in,
+  .top__check-out {
+    position: relative;
+    width: 50%;
+  }
+
+  .top__input-period {
+    font-size: 15px;
+    padding: 0;
+  }
+
+  .top__input-period::placeholder {
+    font-size: 15px;
+  }
+
+  .top__check-end {
+    min-width: 100px;
+    padding-left: 4px;
+  }
+
+  .top__lable-number {
+    font-size: 13px;
+  }
+
+  .top__submit {
+    font-size: 21px;
+    padding: 15px 30px;
+  }
+
   .advantages__text {
     font-size: 35px;
   }
@@ -433,6 +627,264 @@ body {
 
   .col-md-12 {
     width: calc(var(--col-width) * 12);
+  }
+
+  .top__wrapper {
+    padding: 30px 35px;
+  }
+
+  .top_header {
+    margin-bottom: 52px;
+  }
+
+  .top__logo {
+    height: 35px;
+    width: 180px;
+  }
+
+  .top__menu {
+    flex-basis: 120px;
+  }
+
+  .top__list {
+    padding-right: 32px;
+  }
+
+  .top__icon-night {
+    width: 25px;
+    height: 25px;
+  }
+
+  .top__icon-account {
+    width: 35px;
+    height: 35px;
+  }
+
+  .top__list-mobile {
+    background-image: url(../image/menu.png);
+    width: 30px;
+    height: 20px;
+    align-self: flex-start;
+    order: 1;
+  }
+
+  .top__item {
+    display: none;
+  }
+
+  .top__nav-item {
+    order: 2;
+  }
+
+  .top__nav-icon {
+    order: 1;
+  }
+
+  .top__title {
+    padding: 120px 0 31px;
+    max-width: 380px;
+    font-size: 30px;
+  }
+
+  .top__text {
+    font-size: 35px;
+  }
+
+  .form {
+    background: var(--font-bright);
+    padding: 8px;
+  }
+
+  .top__form {
+    flex-direction: column;
+    background-color: var(--font-bright);
+    height: auto;
+    gap: 8px;
+    margin: 0;
+  }
+
+  .top__lable-city {
+    position: absolute;
+    top: 0;
+    color: var(--font-dark);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 24px 0 24px 18px;
+
+  }
+
+  .top__lable-city::before {
+    content: url(../image/glass.png);
+    padding-right: 8px;
+  }
+
+  .top__input-name {
+    padding: 22px 0 21px 24px;
+    border-radius: 4px;
+    margin: 0;
+    height: 60px;
+  }
+
+  .top__input-name::placeholder {
+    opacity: 0;
+  }
+
+  .top__input-name:focus~.top__lable-city,
+  .top__input-name:not(:focus):valid~.top__lable-city {
+    top: -24px;
+    left: 24px;
+    opacity: 1;
+  }
+
+  .top__form-period {
+    width: 100%;
+    margin: 0;
+  }
+
+  .top__lable-period {
+    position: absolute;
+    top: 1px;
+    left: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--font-dark);
+  }
+
+  .top__input-period::placeholder {
+    font-size: 16px;
+    padding-left: 25px;
+    padding-bottom: 5px;
+  }
+
+  .top__input-period:focus~.top__lable-period,
+  .top__input-period:not(:focus):valid~.top__lable-period {
+    top: 5px;
+    left: 35px;
+    color: var(--font-dark);
+    opacity: 1;
+  }
+
+  .top__adults:after,
+  .top__children::after {
+    content: "";
+    display: block;
+    height: 70%;
+    width: 1px;
+    background-color: var(--font-dark);
+    transform: translateY(-50%);
+    position: absolute;
+    right: 0;
+    top: 28px;
+  }
+
+  .top__lable-check::after,
+  .top__lable-adults::after,
+  .top__lable-children::after {
+    display: none;
+  }
+
+  .top__form-period {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    border-radius: 8px;
+    height: 48px;
+    padding: 0;
+  }
+
+  .top__check-in,
+  .top__check-out {
+    height: 48px;
+    padding: 0;
+  }
+
+  .top__input-period {
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .top__input-period::placeholder {
+    position: absolute;
+    top: 23px;
+    left: -15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--font-dark);
+  }
+
+  .top__check-end,
+  .top__check-start {
+    width: 100%;
+    height: 48px;
+    padding: 0;
+  }
+
+  .top__form-people {
+    display: flex;
+    position: relative;
+    border-radius: 8px;
+    padding: 0;
+  }
+
+  .top__adults,
+  .top__children,
+  .top__room {
+    height: 48px;
+    padding: 0;
+  }
+
+  .top__number {
+    height: 48px;
+    width: 100%;
+    border: none;
+  }
+
+  .top__number-adults {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .top__number-room {
+    border-radius: 0 4px 4px 0;
+  }
+
+  .top__number:focus~.top__lable-number,
+  .top__number:not(:focus):valid~.top__lable-number {
+    top: 10px;
+    left: 50px;
+    color: var(--font-dark);
+  }
+
+  .top__lable-adults,
+  .top__lable-children,
+  .top__lable-room {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--font-dark);
+  }
+
+  .top__lable-adults::before,
+  .top__lable-children::before,
+  .top__lable-room::before {
+    position: relative;
+    top: 18px;
+    left: 10px;
+    font-size: 16px;
+  }
+
+  .top__submit {
+    left: 0;
+    height: 48px;
+    border-radius: 4px;
+    font-size: 19px;
+  }
+
+  .top__apps {
+    padding-top: 80px;
+    margin-bottom: 40px;
   }
 
   .footer__nav {
@@ -523,6 +975,45 @@ body {
 }
 
 @media (max-width: 768px) {
+
+  .top__lable-city {
+    top: -3px;
+    font-size: 15px;
+    color: var(--font-dark);
+    font-weight: 500;
+  }
+
+  .top__lable-period {
+    font-size: 12px;
+    top: 7px;
+    left: 10px;
+  }
+
+  .top__input-period::placeholder {
+    position: absolute;
+    top: 25px;
+    left: -15px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--font-dark);
+  }
+
+  .top__lable-number {
+    top: 8px;
+    left: 0;
+    font-size: 12px;
+  }
+
+  .top__lable-number::before {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .top__apps {
+    padding-top: 32px;
+    margin: 0 auto;
+  }
+
   .footer__text {
     font-size: 16px;
   }
@@ -568,6 +1059,56 @@ body {
   .col-sm-6 {
     width: 100%;
   }
+
+  .top {
+    padding: 24px 16px 40px;
+  }
+
+  .top__wrapper {
+    padding: 0;
+  }
+
+  .top_header {
+    margin-bottom: 52px;
+  }
+
+  .top__menu {
+    flex-basis: 115px;
+    align-items: center;
+    height: 24px;
+  }
+
+  .top__logo {
+    background-image: url(../image/logo_vector_house.png);
+    width: 122px;
+    height: 24px;
+  }
+
+  .top__icon-night {
+    width: 16px;
+    height: 16px;
+    margin: 0 16px;
+  }
+
+  .top__icon-account {
+    width: 24px;
+    height: 24px;
+  }
+
+  .top__title {
+    padding: 52px 0 31px;
+    max-width: 334px;
+    font-size: 30px;
+  }
+
+  .top__text {
+    font-size: 30px;
+  }
+
+  form {
+    padding: 0;
+  }
+
 
   .advantages__wrapper {
     padding: 24px 73px 0px;
