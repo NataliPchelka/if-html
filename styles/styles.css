@@ -308,12 +308,12 @@ body {
   color: var(--font-dark);
 }
 
-.top__lable-adults::before {
+/*.top__lable-adults::before {
   content: "2";
   font-size: 18px;
   font-weight: 400;
   color: var(--font-dark);
-}
+}*/
 
 .top__lable-adults::after {
   content: "";
@@ -335,7 +335,7 @@ body {
   left: 80px;
 }
 
-.top__lable-children::before {
+/*.top__lable-children::before {
   content: "0";
   padding-right: 3px;
   font-size: 18px;
@@ -349,7 +349,7 @@ body {
   font-size: 18px;
   font-weight: 400;
   color: var(--font-dark);
-}
+}*/
 
 .top__submit {
   max-width: 100%;
@@ -709,30 +709,35 @@ body {
     color: var(--font-dark);
     font-size: 18px;
     font-weight: 400;
-    padding: 24px 0 24px 18px;
-
+    padding: 15px 0 15px 40px;
   }
 
-  .top__lable-city::before {
-    content: url(../image/glass.png);
-    padding-right: 8px;
+  .top__input-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 20px;
+    left: 20px;
   }
 
   .top__input-name {
     padding: 22px 0 21px 24px;
     border-radius: 4px;
     margin: 0;
-    height: 60px;
+    height: 48px;
   }
 
   .top__input-name::placeholder {
     opacity: 0;
   }
 
+  .top__input-name[type=text] {
+    padding-left: 40px;
+  }
+
   .top__input-name:focus~.top__lable-city,
   .top__input-name:not(:focus):valid~.top__lable-city {
-    top: -24px;
-    left: 24px;
+    top: -15px;
     opacity: 1;
   }
 
@@ -756,10 +761,16 @@ body {
     padding-bottom: 5px;
   }
 
+  .top__input-period[type=text] {
+    padding: 24px 0 0 10px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
   .top__input-period:focus~.top__lable-period,
   .top__input-period:not(:focus):valid~.top__lable-period {
-    top: 5px;
-    left: 35px;
+    top: 6px;
+    font-size: 12px;
     color: var(--font-dark);
     opacity: 1;
   }
@@ -838,6 +849,13 @@ body {
     height: 48px;
     width: 100%;
     border: none;
+    padding-left: 12px;
+  }
+
+  .top__number[type=text] {
+    padding: 20px 0 0 12px;
+    font-size: 15px;
+    font-weight: 500;
   }
 
   .top__number-adults {
@@ -850,17 +868,19 @@ body {
 
   .top__number:focus~.top__lable-number,
   .top__number:not(:focus):valid~.top__lable-number {
-    top: 10px;
-    left: 50px;
+    top: 6px;
+    font-size: 12px;
     color: var(--font-dark);
   }
+
+
 
   .top__lable-adults,
   .top__lable-children,
   .top__lable-room {
     position: absolute;
-    top: 5px;
-    left: 0;
+    top: 12px;
+    left: 15px;
     font-size: 16px;
     font-weight: 400;
     color: var(--font-dark);
@@ -984,7 +1004,7 @@ body {
   }
 
   .top__lable-period {
-    font-size: 12px;
+    font-size: 15px;
     top: 7px;
     left: 10px;
   }
@@ -999,9 +1019,9 @@ body {
   }
 
   .top__lable-number {
-    top: 8px;
-    left: 0;
-    font-size: 12px;
+
+    left: 8px;
+    font-size: 15px;
   }
 
   .top__lable-number::before {
