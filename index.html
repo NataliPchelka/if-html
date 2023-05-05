@@ -108,6 +108,10 @@
       <path fill="#3077C6"
         d="M58.732 46.48c-5.114 0-9.267 4.154-9.267 9.268 0 5.115 4.153 9.268 9.267 9.268 5.115 0 9.268-4.153 9.268-9.268a9.266 9.266 0 0 0-9.268-9.267ZM64.154 57.1h-4.071v4.07h-2.7V57.1H53.31v-2.701h4.071v-4.071h2.7v4.071h4.072v2.7Z" />
     </symbol>
+    <symbol id="person" viewBox="0 0 54 54">
+      <path fill="#BFBFBF"
+        d="M27 .333C12.28.333.333 12.28.333 27 .333 41.72 12.28 53.667 27 53.667c14.72 0 26.667-11.947 26.667-26.667C53.667 12.28 41.72.333 27 .333Zm0 8c4.427 0 8 3.574 8 8 0 4.427-3.573 8-8 8a7.99 7.99 0 0 1-8-8c0-4.426 3.573-8 8-8ZM27 46.2c-6.667 0-12.56-3.413-16-8.587.08-5.306 10.667-8.213 16-8.213 5.307 0 15.92 2.907 16 8.213-3.44 5.174-9.333 8.587-16 8.587Z" />
+    </symbol>
   </svg>
   <div class="top">
     <div class="top__wrapper">
@@ -119,7 +123,6 @@
             <ul class="top__list top__list-mobile">
               <li class="top__item">
                 <a href="#" class="top__link top__link--stays">Stays</a>
-
               </li>
               <li class="top__item">
                 <a href="#" class="top__link top__link--attractions">Attractions</a>
@@ -282,7 +285,8 @@
       <form action="\" class="destination_form">
         <button class="destination__button" type="submit">Regions</button>
         <button class="destination__button" type="submit">Cities</button>
-        <button class="destination__button" type="submit">Places</button>
+        <button class="destination__button" type="submit">Places <span class="destination__words">of
+            interest</span></button>
       </form>
       <div class="destination__cards col-12 col-md-12 col-sm-6">
         <div class="destination__image">
@@ -293,17 +297,19 @@
         <div class="destination__image">
           <img src="./image/spain.png" class="destination__photo" alt="Sea and rocky beach with hills">
           <p class="destination__text">Spain</p>
+          <button class="destination__book" type="button">Book now</button>
         </div>
         <div class="destination__image destination__mobile">
           <img src="./image/norway.png" class="destination__photo" alt="Houses jn the coast and mountains">
           <p class="destination__text">Norway</p>
+          <button class="destination__book" type="submit">Book now</button>
         </div>
         <div class="destination__image destination__mobile">
           <img src="./image/island.png" class="destination__photo" alt="Coast before uraeus">
-          <p class="destination__text">Island
-          </p>
+          <p class="destination__text">Island</p>
+          <button class="destination__book" type="submit">Book now</button>
         </div>
-        <button class="homes__scroll">
+        <button class="destination__scroll">
           <img src="../if-html/image/Polygon.png" alt="Arrow">
         </button>
       </div>
@@ -329,6 +335,102 @@
     </div>
   </div>
 
+  <div class="reviews">
+    <div class="reviews__wrapper">
+      <div class="subtitle destination__subtitle">Guests reviews</div>
+      <div class="reviews__resot">
+        <div class="reviews__cards">
+          <div class="reviews__image reviews__image-resort"></div>
+          <div class="reviews__price">From 250 USD</div>
+          <div class="reviews__hotel">
+            <div class="reviews__place">
+              <p class="reviews__name">Ubud Bali Resort&SPA</p>
+              <p class="reviews__country">Bali, Indonesia</p>
+            </div>
+            <div class="reviews__score">
+              <div class="reviews__rating">9,4</div>
+              <div class="reviews__number">1324 reviews</div>
+            </div>
+          </div>
+          <div class="reviews__person">
+            <svg class="reviews__account">
+              <use href="#person" />
+            </svg>
+            <div class="reviews__user">
+              <p class="reviews__surname">Hanna Ivanova</p>
+              <p class="reviews__location">🇺🇦Ukraine</p>
+            </div>
+          </div>
+          <p class="reviews__feedback">Great location, really pleasant and clean rooms, but the thing that makes
+            this
+            such a good place to stay are the staff. All of the people are incredibly helpful and generous with
+            their
+            time and advice. </p>
+        </div>
+
+        <div class="reviews__cards reviews__mobile">
+          <div class="reviews__image reviews__image-hostel"></div>
+          <div class="reviews__price">From 40 USD</div>
+          <div class="reviews__hotel">
+            <div class="reviews__place">
+              <p class="reviews__name">UKing Kong Hostel</p>
+              <p class="reviews__country">Rotterdam, Netherlands</p>
+            </div>
+            <div class="reviews__score">
+              <div class="reviews__rating">8,9</div>
+              <div class="reviews__number">2016 reviews</div>
+            </div>
+          </div>
+          <div class="reviews__person">
+            <svg class="reviews__account">
+              <use href="#person" />
+            </svg>
+            <div class="reviews__user">
+              <p class="reviews__surname">Adam Smith</p>
+              <p class="reviews__location">🇺🇸 USA</p>
+            </div>
+          </div>
+          <p class="reviews__feedback">GI've been in this hostel for a month and here is the best hostel of all
+            Excellent management of excellent and ethical staff and bedrooms Bathrooms are always clean and excellent
+            Most importantly, those who work here are kind and good-natured. </p>
+        </div>
+
+        <div class="reviews__cards reviews__mobile">
+          <div class="reviews__image reviews__image-hotel"></div>
+          <div class="reviews__price">From 100 USD</div>
+          <div class="reviews__hotel">
+            <div class="reviews__place">
+              <p class="reviews__name">Rokoko Hotel</p>
+              <p class="reviews__country">Ourika, Marocco</p>
+            </div>
+            <div class="reviews__score">
+              <div class="reviews__rating">9,1</div>
+              <div class="reviews__number">815 reviews</div>
+            </div>
+          </div>
+          <div class="reviews__person">
+            <svg class="reviews__account">
+              <use href="#person" />
+            </svg>
+            <div class="reviews__user">
+              <p class="reviews__surname">Anika Messer</p>
+              <p class="reviews__location">🇩🇪 Germany</p>
+            </div>
+          </div>
+          <p class="reviews__feedback">Efficient, friendly, professional, and appropriately attentive. Great hotel in a
+            great location. Easy access to all the surrounding historical sites. Staff is fantastic. Will definitely
+            stay at this location during my next stay in Marocco. </p>
+        </div>
+      </div>
+      <div class="reviews__navigation">
+        <button class="reviews__ellipse"></button>
+        <button class="reviews__ellipse"></button>
+        <button class="reviews__ellipse"></button>
+        <button class="reviews__ellipse"></button>
+      </div>
+    </div>
+  </div>
+
   <div class="sing-up__mobile">
     <div class="sing-up__wrapper">
       <div class="sing-up__content">
@@ -343,7 +445,6 @@
       </div>
     </div>
   </div>
-
 
   <div class="footer">
     <div class="footer__wrapper col-12 col-md-12 col-sm-6">

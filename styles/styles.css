@@ -468,10 +468,12 @@ body {
 }
 
 .homes__cards {
+
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: scroll;
   padding: 0;
   padding-bottom: 121px;
 }
@@ -482,7 +484,6 @@ body {
 
 .homes__image {
   min-width: 296px;
-  height: auto;
   margin: 0;
   padding: 0;
 }
@@ -519,6 +520,7 @@ body {
 }
 
 .destination__wrapper {
+  max-width: 1440px;
   padding: 0 104px;
   height: auto;
 }
@@ -533,7 +535,7 @@ body {
 }
 
 .destination_form {
-  max-width: 622px;
+  max-width: 657px;
   margin: 0 0 65px;
   background: #F3F3F4;
   border-radius: 8px;
@@ -560,19 +562,22 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 16px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow: scroll;
   padding: 0;
   padding-bottom: 201px;
   text-align: center;
 }
 
 .destination__image {
+  position: relative;
   margin: 0;
   padding: 0;
   height: auto;
 }
 
 .destination__photo {
+
   min-width: 296px;
   height: 296px;
 }
@@ -602,10 +607,41 @@ body {
   font-size: 18px;
   top: 125px;
   left: 80px;
+  opacity: 0;
+}
+
+.destination__image:hover {
+  cursor: pointer;
+}
+
+.destination__image:hover .destination__photo {
+  background: rgba(56, 56, 56, 0.4);
+  box-shadow: inset 0px 4px 70px rgba(56, 56, 56, 0.5);
+  filter: brightness(50%);
+}
+
+.destination__image:hover .destination__book {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.destination__scroll {
+  position: absolute;
+  top: 70%;
+  left: 49%;
+  width: 40px;
+  height: 40px;
+  padding: 11px 15px 10px 17px;
+  border-radius: 50%;
+  background-color: #F3F3F4;
+  border: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transform: rotate(90deg);
 }
 
 .sing-up__wrapper {
   position: relative;
+
   height: auto;
   margin: 0 104px;
   background-color: #EAF0F9;
@@ -613,7 +649,6 @@ body {
 
 .sing-up__content {
   display: flex;
-
 }
 
 .sing-up__user {
@@ -656,6 +691,145 @@ body {
   font-size: 60px;
   color: #BFBFBF;
   font-weight: 100;
+}
+
+.sing-up__mobile {
+  display: none;
+}
+
+.reviews__wrapper {
+  max-width: 1440px;
+  padding: 0 104px;
+}
+
+.reviews__resot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 120px;
+}
+
+.reviews__cards {
+  max-width: 400px;
+  position: relative;
+  background-color: #EAF0F9;
+}
+
+.reviews__image {
+  max-width: 400px;
+  height: 400px;
+}
+
+.reviews__image-resort {
+  background: url(../image/resort.png);
+}
+
+.reviews__image-hostel {
+  background: url(../image/rotterdam.png);
+}
+
+.reviews__image-hotel {
+  background: url(../image/marocco.png);
+}
+
+.reviews__price {
+  position: absolute;
+  min-width: 400px;
+  height: 48px;
+  background-color: #383838;
+  opacity: 0.7;
+  top: 45%;
+  color: var(--font-light);
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 0 11px 24px;
+}
+
+.reviews__hotel {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 24px 29px;
+}
+
+.reviews__place {
+  margin: 0;
+  font-size: 18px;
+  color: #3077C6;
+}
+
+.reviews__name {
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.reviews__score {
+  text-align: right;
+  margin: 0;
+}
+
+.reviews__rating {
+  width: 48px;
+  height: 32px;
+  background-color: #10367C;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--font-light);
+  padding: 4px 11px;
+  margin-right: 0;
+  margin-bottom: 8px;
+}
+
+.reviews__number {
+  font-size: 14px;
+  color: #BFBFBF;
+}
+
+.reviews__person {
+  display: flex;
+  padding-left: 29px;
+
+}
+
+.reviews__block {
+  margin: 0;
+  padding-left: 29px;
+  max-width: 53px;
+  height: 53px;
+}
+
+.reviews__account {
+  width: 53px;
+  height: 53px;
+  margin: 0;
+
+}
+
+.reviews__user {
+  margin: 0;
+  padding-left: 21px;
+}
+
+.reviews__surname {
+  font-size: 18px;
+  color: #383838;
+  margin-bottom: 8px;
+}
+
+.reviews__location {
+  font-size: 18px;
+  color: #BFBFBF;
+}
+
+.reviews__feedback {
+  font-size: 18px;
+  color: #383838;
+  text-align: left;
+  padding: 22px 24px 66px;
+}
+
+.reviews__navigation {
+  display: none;
 }
 
 .sing-up__mobile {
@@ -1189,8 +1363,17 @@ body {
     display: none;
   }
 
-  .homes__scroll {
-    right: 7%;
+  .homes__image {
+    min-width: 220px;
+  }
+
+  .homes__picture {
+    min-width: 200px;
+  }
+
+  .homes__scroll,
+  .destination__scroll {
+    display: none;
   }
 
   .destination__subtitle {
@@ -1208,6 +1391,8 @@ body {
     height: 50px;
     padding: 10px 20px;
     font-size: 20px;
+    border: 1px solid #F3F3F4;
+    background-color: var(--font-light);
   }
 
   .destination__mobile {
@@ -1229,7 +1414,8 @@ body {
   }
 
   .destination__book {
-    display: none;
+    top: 80px;
+    left: 50px
   }
 
   .destination__arrow {
@@ -1237,6 +1423,38 @@ body {
     transform: none;
     top: 20%;
   }
+
+  .destination__cards:last-child .destination__scroll {
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    transform: none;
+  }
+
+  .reviews__resot {
+    margin-bottom: 20px;
+  }
+
+  .reviews__navigation {
+    display: block;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .reviews__ellipse {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid #333333;
+    background: #ffffff;
+    padding: 0;
+
+  }
+
+  .reviews__ellipse:hover {
+    background: #333333;
+  }
+
 
   .sing-up__user {
     width: 76px;
@@ -1255,6 +1473,10 @@ body {
 
   .sing-up__close {
     font-size: 50px;
+  }
+
+  .reviews__mobile {
+    display: none;
   }
 
   .footer__nav {
@@ -1358,7 +1580,7 @@ body {
 
   .homes__picture {
     min-width: 156px;
-    height: 157px;
+    height: 156px;
   }
 
   .homes__image {
@@ -1502,6 +1724,84 @@ body {
     position: static;
     font-size: 32px;
     margin: 0;
+  }
+
+  .reviews__wrapper {
+    padding: 40px 18px 0;
+    background-color: #EAF0F9;
+  }
+
+  .reviews__resot {
+    margin-bottom: 0;
+  }
+
+  .reviews__cards {
+    max-width: 327px;
+  }
+
+  .reviews__image {
+    max-width: 325px;
+    height: 326px;
+  }
+
+  .reviews__price {
+    display: none;
+  }
+
+  .reviews__hotel {
+    padding: 12px 0 16px
+  }
+
+  .reviews__place,
+  .reviews__user,
+  .reviews__surname,
+  .reviews__location,
+  .reviews__feedback {
+    font-size: 15px;
+  }
+
+  .reviews__name,
+  .reviews__rating {
+    margin-bottom: 8px;
+  }
+
+  .reviews__rating {
+    width: 39px;
+    height: 26px;
+    font-size: 15px;
+  }
+
+  .reviews__number {
+    font-size: 12px;
+  }
+
+  .reviews__person {
+    padding-left: 0;
+  }
+
+  .reviews__account {
+    width: 43px;
+    height: 43px;
+    padding-left: 0;
+  }
+
+  .reviews__user {
+    padding-left: 13px;
+  }
+
+  .reviews__feedback {
+    padding: 20px 0 32px;
+  }
+
+  .reviews__navigation {
+    margin-bottom: 0;
+
+  }
+
+  .reviews__ellipse {
+    width: 8px;
+    height: 8px;
+    margin-bottom: 40px;
   }
 
   .footer__text {
@@ -1664,6 +1964,10 @@ body {
   .destination__photo {
     min-width: 156px;
     height: 156px;
+  }
+
+  .destination__words {
+    display: none;
   }
 
   .footer {
