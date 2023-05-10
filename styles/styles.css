@@ -18,6 +18,7 @@ body {
   --font-sky: #10367C;
   --font-paleblue: #EAF0F9;
   --font-grey: #BFBFBF;
+  --font-purplish-blue: #F3F3F4;
 }
 
 .col-1 {
@@ -569,7 +570,7 @@ body {
   height: 40px;
   padding: 11px 15px 10px 17px;
   border-radius: 50%;
-  background-color: #F3F3F4;
+  background-color: var(--font-purplish-blue);
   border: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -592,7 +593,7 @@ body {
 .destination_form {
   max-width: 623px;
   margin: 0 0 65px;
-  background: #F3F3F4;
+  background: var(--font-purplish-blue);
   border-radius: 8px;
 }
 
@@ -602,7 +603,7 @@ body {
   border: none;
   text-align: center;
   font-size: 24px;
-  background-color: #F3F3F4;
+  background-color: var(--font-purplish-blue);
   color: var(--font-dark);
 }
 
@@ -699,7 +700,7 @@ body {
   height: 40px;
   padding: 11px 15px 10px 17px;
   border-radius: 50%;
-  background-color: #F3F3F4;
+  background-color: var(--font-purplish-blue);
   border: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   transform: rotate(90deg);
@@ -714,7 +715,6 @@ body {
 
 .sing-up__content {
   display: flex;
-
 }
 
 .sing-up__user {
@@ -917,7 +917,7 @@ body {
   height: 40px;
   padding: 11px 15px 10px 17px;
   border-radius: 50%;
-  background-color: #F3F3F4;
+  background-color: var(--font-purplish-blue);
   border: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -946,7 +946,7 @@ body {
   padding: 110px 104px 0px;
 }
 
-.footer__item {
+.footer__list {
   list-style-type: none;
   padding-left: 0;
   color: var(--font-light);
@@ -959,7 +959,7 @@ body {
   font-weight: 500;
 }
 
-.footer__item--support {
+.footer__list--support {
   padding-left: 124px;
 }
 
@@ -1074,11 +1074,11 @@ body {
     margin-bottom: 50px;
   }
 
-  .footer__item {
+  .footer__list {
     font-size: 18px;
   }
 
-  .footer__item--support {
+  .footer__list--support {
     padding: 0;
   }
 
@@ -1517,7 +1517,7 @@ body {
     height: 50px;
     padding: 10px 20px;
     font-size: 20px;
-    border: 1px solid #F3F3F4;
+    border: 1px solid var(--font-purplish-blue);
     background-color: var(--font-light);
   }
 
@@ -1647,7 +1647,7 @@ body {
     margin-bottom: 40px;
   }
 
-  .footer__list {
+  .footer__lists {
     display: none;
   }
 
@@ -2175,10 +2175,6 @@ body {
     width: 98px;
     height: 19px;
     margin-bottom: 40px;
-  }
-
-  .footer__list {
-    display: none;
   }
 
   .footer__links {
